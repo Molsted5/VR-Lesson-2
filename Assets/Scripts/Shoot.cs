@@ -25,7 +25,8 @@ public class Shoot : MonoBehaviour
 
             Ray ray = new Ray (transform.position, transform.rotation * Vector3.forward);
             RaycastHit hitInfo;
-		    if (Physics.Raycast (ray, out hitInfo, 200000, mask, QueryTriggerInteraction.Ignore)) {
+		    if (Physics.Raycast (ray, out hitInfo, 2000000, mask, QueryTriggerInteraction.Ignore)) {
+
 			    Destroy (hitInfo.transform.gameObject);
 		    }
         }
